@@ -1,0 +1,31 @@
+.component-galeria{
+	.galeria-big{
+		img{
+			height:300px;
+			border-radius: 6px;
+		}
+	}
+	.galeria-small{
+		img{
+			height:100px;
+			padding:8px;
+			border-radius: 3px;
+		}
+		
+	}
+	
+	.icon-arrow{
+		cursor:pointer;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		background: rgba(255,255,255,0.7);
+		display: flex;
+		align-items: center;
+		padding: 0 4px;
+		&.right{
+			right:0;
+		}
+	}
+}

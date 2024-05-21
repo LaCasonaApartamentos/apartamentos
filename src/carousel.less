@@ -1,0 +1,75 @@
+﻿.component-carousel{
+	position:relative;
+	&:hover{
+		.icon-arrow{
+			color: rgba(255, 255, 255, 0.9);
+		}
+	}
+	.icon-arrow{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 50px;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		margin: 16px;
+		cursor:pointer;
+		&.left{
+			left:0;
+		}
+		&.right{
+			right:0;
+		}
+	}
+	.slick-dots{
+			margin-top:1em;
+			list-style:none;
+			padding:0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		li{
+			margin : 0 8px;
+			&.slick-active button:before{
+				opacity: .75;
+				color: black;
+			}
+		}
+		button{
+			margin:0;
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+			border: none;
+			cursor: pointer;
+			color: transparent;
+			border: 0;
+			outline: none;
+			background: transparent;
+			position:relative;
+			&:before {
+				font-family: 'slick';
+				font-size: 25px;
+				line-height: 20px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				content: '•';
+				text-align: center;
+				opacity: .25;
+				color: black;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
+	} 
+}
+.component-gallery{
+	.imgCover{
+		
+	}
+}

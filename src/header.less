@@ -1,96 +1,116 @@
 header{
-    background-color: rgba(255,255,255, 1);
-    display: flex;
-    justify-content: flex-end;
+	padding:16px;
+	position:fixed;
+	z-index:3;
+	top:0;
+	background-color: rgba(255,255,255,0.5);
+	display:flex;
+	display: flex;
     align-items: center;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    top: 0;
-    box-shadow: 0px 8px 32px -16px rgba(0, 0, 0, 0.08);
-    &:hover{
-        transition: 0.5s;
-    }
-    .logo {
-        position: absolute;
-        left: 20px;
-        width: 100px;
-        cursor: pointer;
-    }
-    li, a, button{
-        font-family: 'Futura-Light';
-        font-weight: 600;
-        font-size: 18px;
-        color: #54585a;
-        text-decoration: none;
-    }
-    .navlinks li{
-        display: inline-block;
-        margin: 16px 24px;
-        align-items: center;
-    }
-    .navlinks li a:hover{
-        color: #016a7f;
-    }
-
-    button{
-        width: 100%;
-        padding: 8px 12px;
-        background-color: #016a7f;
-        color: #fff;
-        border-radius: 6px;
-        outline: none;
-        cursor: pointer;
-        transition: all 0.5s, ease 0s;
-        border: none;
-        z-index: 999;
-    }
-    button:hover{
-        box-shadow: 1px 1px 5px black;
-    }
-    .sidebar{
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 300px; 
-        z-index: 999;
-        background-color: #fff;
-        backdrop-filter: blur(10px);
-        display: none;
-        justify-content: flex-start;
-        list-style: none;
-        flex-direction: column;
-        transition: transform 0.3s ease;
-        transform: translateX(100%);
-    }
-    .sidebar li{
-        width: 100%;
-        margin: 25px;
-    }
-    .sidebar img{
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        height: 120px;
-    }
-    nav ion-icon{
-        font-size: 2em;
-        position: absolute;
-        top: 35px;
-        right: 20px;
-    }
-    @media only screen and (min-width: 830px){
-        .navlinks ion-icon{
-            display: none;
-
-        }
-    }
-    @media only screen and (max-width: 830px){
-        .navlinks .items{
-            display: none;
-        }
-    }
-
+    justify-content: space-between;
+    width: 100%;
+	color:@black;
+	box-shadow: 0px 8px 32px -16px rgba(0, 0, 0, 0.08); 
+	.block-logo{
+		.text-logo{
+			color: @black;
+			font-family: @font-light;
+			font-size: 20px;
+			font-weight: normal;
+			line-height: 1em;
+		}
+	}
+	.icon{
+		font-size:30px;
+		cursor:pointer;
+	}
+}
+.block-submenu{
+		position:fixed;
+		top:0; 
+		left:0;
+		bottom:0;
+		z-index:4;
+		background-color:@white;
+		color:@bg-black;
+		padding:2em;
+		display: flex;
+		align-items: center;
+		transform: translateX(-100%);
+		opacity:0;
+	.img-logo{
+		width: 200px;
+		margin: 0 auto 16px auto;
+	}
+	.nav{
+		li{
+			display:block;
+			width:100%;
+			display:flex; 
+			align-items:center;
+			&.active a{
+				font-weight:bold;
+				color:@black;
+			}
+		}
+		a{
+			width: 100%;
+			color:@grey;
+			font-size:15px;
+			position: relative;
+			overflow: hidden;
+			display: inline-block;
+			text-decoration: none;
+			padding: 8px 0;
+			font-family: @font-light;
+			&:not(.btn){
+				padding-left:0;
+			}
+			&:hover{
+				color:@primary;
+			}
+			&.btn{
+				width:100%;
+				background-color:@primary;
+				color:@white;
+				margin-bottom: 16px;
+				border:solid 1px @primary;
+				&:hover{
+					color:@primary;
+					background-color:@white;
+				}
+			}
+		}
+		.icon{
+			font-size: 20px;
+			min-width: 30px;
+			margin-right: 20px;
+			display: inline-block;
+		}
+	}
+	.icon-close{
+		position: absolute;
+		top: 2em;
+		left: 0;
+		cursor: pointer;
+	}
+	width:300px;
+	@media(max-width:768px){
+		width:100%;
+	}
+	-webkit-transition: all 0.5s ease-out;
+    -moz-transition   : all 0.5s ease-out;
+    -o-transition     : all 0.5s ease-out;
+   	transition: all 0.5s ease-out;
+	&.open{
+		 transform: translateX(0%); 
+         opacity: 1;
+		 box-shadow: 0px 100px 32px -16px rgba(0, 0, 0, 0.08);
+	}
+	
+}
+@keyframes aparece-izquierda
+{
+         transform: translateX(0%); 
+         opacity: 1;
 }
