@@ -52,7 +52,6 @@ p, .list-simple , .text{
     font-weight: normal;
     text-transform: uppercase;
     line-height: 1em;
-    letter-spacing: -0.3px;
 }
 .title-primary{
 	font-family: @Oswald;
@@ -68,7 +67,7 @@ p, .list-simple , .text{
 	margin-bottom:30px;
 }
 .text-category{
-	font-family: @Barlow;
+	font-family:@font-light;
 	font-size: 16px;
 	font-weight: 500;
 	font-stretch: normal;
@@ -79,6 +78,14 @@ p, .list-simple , .text{
 	display:block;
 	margin-bottom:5px;
 	text-transform:uppercase;
+}
+.font-16{
+	font-size: 16px;
+	line-height: 1.54;
+}
+.font-18{
+	font-size: 18px;
+	line-height: 1.54;
 }
 .text-italic{
 	font-style: italic;
@@ -173,6 +180,22 @@ a{
 		&:hover{
 			background-color: @primary;
 			color: @white;
+		}
+	}
+	&.btn-primary{
+		color:@white;
+		background-color: @primary;
+		border: solid 1px @primary;
+		display: flex;
+		align-items: center;
+		.icon{
+			display: block;
+			margin-right: 8px;
+			font-size: 16px;
+		}
+		&:hover{
+			color: @primary;
+			background-color: @white;
 		}
 	}
 	&.btn-black{

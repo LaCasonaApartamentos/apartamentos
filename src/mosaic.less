@@ -48,9 +48,12 @@
 			}
 		}
 		@media(min-width:1024px){
-			.block-left, .block-right{
-				width: 50%;
+			&:not(.only-1-col){
+				.block-left, .block-right{
+					width: 50%;
+				}
 			}
+			
 		}
 	} 
 } 

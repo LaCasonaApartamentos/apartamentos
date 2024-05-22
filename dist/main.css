@@ -804,6 +804,7 @@ header .icon {
 footer {
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: #fff;
 }
 footer img {
   max-width: 200px;
@@ -2934,7 +2935,6 @@ p,
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1em;
-  letter-spacing: -0.3px;
 }
 .title-primary {
   font-family: 'Oswald';
@@ -2950,7 +2950,7 @@ p,
   margin-bottom: 30px;
 }
 .text-category {
-  font-family: 'Barlow';
+  font-family: 'Futura-Light';
   font-size: 16px;
   font-weight: 500;
   font-stretch: normal;
@@ -2961,6 +2961,14 @@ p,
   display: block;
   margin-bottom: 5px;
   text-transform: uppercase;
+}
+.font-16 {
+  font-size: 16px;
+  line-height: 1.54;
+}
+.font-18 {
+  font-size: 18px;
+  line-height: 1.54;
 }
 .text-italic {
   font-style: italic;
@@ -3056,6 +3064,22 @@ a:hover {
 .btn.btn-white:hover {
   background-color: #016a7f;
   color: #fff;
+}
+.btn.btn-primary {
+  color: #fff;
+  background-color: #016a7f;
+  border: solid 1px #016a7f;
+  display: flex;
+  align-items: center;
+}
+.btn.btn-primary .icon {
+  display: block;
+  margin-right: 8px;
+  font-size: 16px;
+}
+.btn.btn-primary:hover {
+  color: #016a7f;
+  background-color: #fff;
 }
 .btn.btn-black {
   color: #fff;
@@ -3475,8 +3499,8 @@ a:hover {
   margin-bottom: 0;
 }
 @media (min-width: 1024px) {
-  .mosaic-component .block-container-img .block-left,
-  .mosaic-component .block-container-img .block-right {
+  .mosaic-component .block-container-img:not(.only-1-col) .block-left,
+  .mosaic-component .block-container-img:not(.only-1-col) .block-right {
     width: 50%;
   }
 }
@@ -3639,6 +3663,7 @@ button.btn {
   overflow: hidden;
   display: flex;
   flex-flow: column nowrap;
+  border: 0;
 }
 .card:not(.card-transparent) {
   box-shadow: 0 8px 32px -16px rgba(0, 0, 0, 0.08);
@@ -3679,7 +3704,17 @@ button.btn {
   z-index: 1;
 }
 .card.card-m {
-  min-height: 548px;
+  min-height: 300px;
+}
+@media (min-width: 768px) {
+  .card.card-m {
+    min-height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .card.card-m {
+    min-height: 548px;
+  }
 }
 .grid-4 .card.card-l {
   padding: 24px;
@@ -3724,7 +3759,7 @@ button.btn {
   margin-bottom: 72px;
   padding-bottom: 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .distributive-es-basic-component {
     padding-top: 72px;
   }
@@ -3742,6 +3777,14 @@ button.btn {
 @media (min-width: 1024px) {
   .distributive-es-basic-component .bg-box.bg-box-medium {
     height: calc(100% - 64px);
+  }
+}
+.distributive-es-basic-component .item {
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  .distributive-es-basic-component .item {
+    margin-bottom: 0;
   }
 }
 .card-info {

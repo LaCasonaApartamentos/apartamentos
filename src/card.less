@@ -3,6 +3,7 @@
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
+    border: 0;
     &:not(.card-transparent){
         box-shadow: 0 8px 32px -16px rgba(0, 0, 0, 0.08);
         border-radius: 8px;
@@ -45,7 +46,13 @@
         
     }
     &.card-m{
-        min-height: 548px;
+        min-height: 300px;
+        @media(min-width:768px){
+            min-height: 400px;
+        }
+        @media(min-width:1024px){
+            min-height: 548px;
+        }
     }
 }
 .grid-4{
@@ -88,7 +95,7 @@
     position: relative;
     margin-bottom: 72px;
     padding-bottom: 0;
-    @media(min-width:1024px){
+    @media(min-width:768px){
         padding-top: 72px;
     }
     .bg-box{
@@ -102,6 +109,12 @@
             @media(min-width:1024px){
                 height: calc(100% - 64px);
             }
+        }
+    }
+    .item{
+        margin-bottom: 24px;
+        @media(min-width:1024px){
+            margin-bottom: 0;
         }
     }
 }
