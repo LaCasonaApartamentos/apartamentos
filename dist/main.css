@@ -201,6 +201,7 @@ header .icon {
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  overflow: hidden;
 }
 .lca-banner-1 .box-img {
   position: absolute;
@@ -262,6 +263,11 @@ header .icon {
   min-height: 30vh;
   border-radius: 12px;
   overflow: hidden;
+}
+.lca-banner-1.type-banner:hover img {
+  transform: scale(1.1);
+  transition: all 3s cubic-bezier(0, 0, 0.58, 1);
+  -webkit-transition: all 3s cubic-bezier(0, 0, 0.58, 1);
 }
 .lca-banner-2 .box-info {
   padding-top: 20px;
@@ -3829,6 +3835,11 @@ button.btn {
   z-index: 1;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.5) 38.98%, rgba(0, 0, 0, 0) 50.25%);
 }
+.card:hover .box-img img {
+  transform: scale(1.1);
+  transition: all 3s cubic-bezier(0, 0, 0.58, 1);
+  -webkit-transition: all 3s cubic-bezier(0, 0, 0.58, 1);
+}
 .card .box-img img {
   position: absolute;
   top: 0;
@@ -3938,6 +3949,13 @@ button.btn {
   .distributive-es-basic-component .bg-box.bg-box-medium {
     height: calc(100% - 64px);
   }
+}
+.distributive-es-basic-component .bg-box:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  border-top: 0.1rem solid rgba(208, 218, 214, 0.5);
+  margin-bottom: 0.5rem;
 }
 .distributive-es-basic-component .item {
   margin-bottom: 24px;

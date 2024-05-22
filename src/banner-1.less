@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: #fff;
+    overflow: hidden;
     .box-img{
         position: absolute;
         top:0;
@@ -66,5 +67,12 @@
         min-height: 30vh;
         border-radius: 12px;
         overflow: hidden;
+        &:hover{
+            img{
+                transform: scale(1.1);
+                transition: all 3s cubic-bezier(0,0,0.58,1);
+                -webkit-transition: all 3s cubic-bezier(0,0,0.58,1); 
+            }
+        }
     }
 }
