@@ -33,6 +33,12 @@ $(document).ready(function(){
 	if($(document).find(".component-reserva").length >0){
 		//initDatePicker();
 	}
+	$('.grid').masonry({
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		horizontalOrder: true,
+		resize: true
+	  });
 	
 });
 function initGaleria(obj) {

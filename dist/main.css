@@ -3504,6 +3504,31 @@ a:hover {
     width: 50%;
   }
 }
+.grid .grid-item {
+  padding: 4px;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .grid .grid-item {
+    width: 25%;
+  }
+}
+.grid .grid-item.grid-item-1 {
+  width: 12%;
+}
+@media (min-width: 768px) {
+  .grid .grid-item.grid-item-2 {
+    width: 50%;
+  }
+}
+.grid .grid-item.grid-item-3 {
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .grid .grid-item.grid-item-3 {
+    width: 75%;
+  }
+}
 .component-carousel {
   position: relative;
 }

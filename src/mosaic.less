@@ -57,3 +57,26 @@
 		}
 	} 
 } 
+.grid{
+	.grid-item{
+		padding: 4px;
+		width: 50%;
+		@media(min-width:768px){
+			width: 25%;
+		}
+		&.grid-item-1{
+			width: 12%;
+		}
+		&.grid-item-2{
+			@media(min-width:768px){
+				width: 50%;
+			}
+		}
+		&.grid-item-3{
+			width: 50%;
+			@media(min-width:768px){
+				width: 75%;
+			}
+		}
+	}
+}
