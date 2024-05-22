@@ -1,47 +1,45 @@
 footer{
 	padding-top:40px;
-	padding-bottom: 40px;
+	padding-bottom: 25px;
 	background-color: @white;
-	img{
-		max-width: 200px;
-	}
-	.block-info{
-		display:flex;
-		justify-content: space-between;
-	}
-	.info{
-		text-align: right;
-		.link-mail{
-			margin-left: 50px;
+	ul{
+		margin: 0 -4px -4px -4px;
+		padding: 0;
+		text-align: center;
+		li{
+			display: inline-block;
+			padding: 0 4px;
+			margin-bottom: 4px;
 		}
-		.div-item{
-			> *:not(:first-child){
-				padding-left: 4px;
-				margin-left: 4px;
-				border-left: 1px solid #000;
-			}
+	}
+	.box-btn{
+		@media(min-width:768px){
+			display: flex;
+			align-items: center;
 		}
-		
-		a, p{
-			font-family: "Nunito-ExtraLight";
-			font-weight: normal;
-			font-style: normal;
-			color: #000000;
-			
+		.btn{
 			font-size: 14px;
-			line-height: 16px;
-			text-decoration: none;
-			display: inline-flex;
-			align-items:center;
-			img{
-				max-width: 20px;
-				margin-right: 4px;
-				&.icon-tlf{
-					max-width: 13px;
-				}
+			margin-bottom: 8px;
+			width: 100%;
+			@media(min-width:768px){
+				width: auto;
 			}
-			&:hover {
-				text-decoration: none;
+		}
+		.btn:not(:last-child){
+			margin-right: 24px;
+		}
+	}
+	.footer-content{
+		@media(min-width:1024px){
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.box-btn{
+				order:2;
+			}
+			ul{
+				order:1;
+				text-align: left;
 			}
 		}
 	}

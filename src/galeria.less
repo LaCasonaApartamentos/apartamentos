@@ -20,12 +20,49 @@
 		top: 0;
 		bottom: 0;
 		z-index: 1;
-		background: rgba(255,255,255,0.7);
+		background: rgba(255,255,255,0.8);
 		display: flex;
 		align-items: center;
 		padding: 0 4px;
+		color: @primary;
 		&.right{
 			right:0;
 		}
 	}
 }
+.lightbox{
+	min-height: 100vh;
+	.lb-outerContainer{
+		background-color: transparent;
+		min-width: 100%;
+		img{
+			margin: 0 auto;
+		}
+	}
+	.lb-image{
+		border-color: transparent;
+		border-radius: 13px;
+	}
+	.lb-dataContainer{
+		position: fixed;
+		bottom: 24px;
+		left: 24px;
+	}
+	.lb-data{
+
+		.lb-caption{
+			font-family: @font-regular;
+			font-size: 24px;
+			margin-bottom: 4px;
+		}
+		.lb-number{
+			font-family: @font-light;
+			font-size: 16px;
+		}
+		.lb-closeContainer{
+			position: fixed;
+			top: 20px;
+			right: 20px;
+		}
+	}
+} 

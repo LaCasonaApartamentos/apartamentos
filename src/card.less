@@ -46,6 +46,7 @@
         
     }
     &.card-m{
+        padding: 24px;
         min-height: 300px;
         @media(min-width:768px){
             min-height: 400px;
@@ -53,6 +54,16 @@
         @media(min-width:1024px){
             min-height: 548px;
         }
+    }
+    &.card-s{
+        padding: 24px;
+        min-height: 300px;
+        @media(min-width:1024px){
+            min-height: 290px;
+        }
+    }
+    &.banner{
+        height: 30vh;
     }
 }
 .grid-4{
@@ -95,6 +106,7 @@
     position: relative;
     margin-bottom: 72px;
     padding-bottom: 0;
+    padding-top: 72px;
     @media(min-width:768px){
         padding-top: 72px;
     }
@@ -131,6 +143,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        &.big{
+            height: 400px;
         }
     }
     .box-info{

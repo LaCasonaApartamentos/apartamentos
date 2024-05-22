@@ -78,6 +78,9 @@ p, .list-simple , .text{
 	display:block;
 	margin-bottom:5px;
 	text-transform:uppercase;
+	&.type-regular{
+		font-family:@font-regular;
+	}
 }
 .font-16{
 	font-size: 16px;
@@ -358,4 +361,69 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.box-informative{
+	text-align: center;
+	@media(min-width:768px){
+		text-align: left;
+		display: flex;
+		align-items: center;
+	}
+	.box-btn{
+		margin-top: 16px;
+		@media(min-width:768px){
+			margin-left: 16px;
+		}
+		@media(min-width:1024px){
+			margin-top: 0;
+			margin-left: 0;
+			display: flex;
+			align-items: center;
+		}
+		.btn{
+			width: 100%;
+			&:not(:last-child){
+				margin-bottom: 8px;
+			}
+			@media(min-width:1024px){
+				width: auto;
+				&:not(:last-child){
+					margin-bottom: 0;
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+	.box-icon{
+		.icon{
+			display: inline-block;
+			font-size: 50px;
+			margin-bottom: 24px;
+			@media(min-width:768px){
+				margin-right: 24px;
+			}
+		}
+	}
+	.box-info{
+		flex:1;
+	}
+	.btn:not(:last-child){
+		margin-right: 8px;
+	}
+}
+.block-comments{
+	background-color: @white;
+	border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px -16px rgba(0,0,0,0.08);
+	padding: 45px;
+	.block-points{
+		text-align: center;
+		margin-bottom: 16px;
+		.icon{
+			font-size: 18px;
+			color: rgb(250, 187, 5);
+			
+		}
+	}
 }

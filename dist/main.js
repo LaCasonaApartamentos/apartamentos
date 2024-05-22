@@ -33,21 +33,24 @@ $(document).ready(function(){
 	if($(document).find(".component-reserva").length >0){
 		//initDatePicker();
 	}
-	$('.grid').masonry({
-		itemSelector: '.grid-item',
-		percentPosition: true,
-		horizontalOrder: true,
-		resize: true
-	  });
+	if($(".grid").length > 0){
+		$('.grid').masonry({
+			itemSelector: '.grid-item',
+			percentPosition: true,
+			horizontalOrder: true,
+			resize: true
+		});
+	}
 	
 });
 function initGaleria(obj) {
 	obj.find('.galeria-big').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: false,
+		arrows: true,
+		prevArrow:"<div class='icon-arrow left'><span class='icon-chevron-left'></span></div>",
+		nextArrow:"<div class='icon-arrow right'><span class='icon-chevron-right'></span></div>",
 		fade: true,
-		asNavFor: '.galeria-small'
 	});
 	obj.find('.galeria-small').slick({
 		slidesToShow: 4,

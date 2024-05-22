@@ -251,6 +251,18 @@ header .icon {
   margin: 0 auto 20px auto;
   border-radius: 100%;
 }
+.lca-banner-1 .box-info .box-icon .icon {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 24px;
+  display: inline-block;
+  color: #fff;
+}
+.lca-banner-1.type-banner {
+  min-height: 30vh;
+  border-radius: 12px;
+  overflow: hidden;
+}
 .lca-banner-2 .box-info {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -803,51 +815,51 @@ header .icon {
 }
 footer {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
   background-color: #fff;
 }
-footer img {
-  max-width: 200px;
+footer ul {
+  margin: 0 -4px -4px -4px;
+  padding: 0;
+  text-align: center;
 }
-footer .block-info {
-  display: flex;
-  justify-content: space-between;
+footer ul li {
+  display: inline-block;
+  padding: 0 4px;
+  margin-bottom: 4px;
 }
-footer .info {
-  text-align: right;
+@media (min-width: 768px) {
+  footer .box-btn {
+    display: flex;
+    align-items: center;
+  }
 }
-footer .info .link-mail {
-  margin-left: 50px;
-}
-footer .info .div-item > *:not(:first-child) {
-  padding-left: 4px;
-  margin-left: 4px;
-  border-left: 1px solid #000;
-}
-footer .info a,
-footer .info p {
-  font-family: "Nunito-ExtraLight";
-  font-weight: normal;
-  font-style: normal;
-  color: #000000;
+footer .box-btn .btn {
   font-size: 14px;
-  line-height: 16px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
 }
-footer .info a img,
-footer .info p img {
-  max-width: 20px;
-  margin-right: 4px;
+@media (min-width: 768px) {
+  footer .box-btn .btn {
+    width: auto;
+  }
 }
-footer .info a img.icon-tlf,
-footer .info p img.icon-tlf {
-  max-width: 13px;
+footer .box-btn .btn:not(:last-child) {
+  margin-right: 24px;
 }
-footer .info a:hover,
-footer .info p:hover {
-  text-decoration: none;
+@media (min-width: 1024px) {
+  footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .footer-content .box-btn {
+    order: 2;
+  }
+  footer .footer-content ul {
+    order: 1;
+    text-align: left;
+  }
 }
 @font-face {
   font-family: 'hotelSerranillos';
@@ -2962,6 +2974,9 @@ p,
   margin-bottom: 5px;
   text-transform: uppercase;
 }
+.text-category.type-regular {
+  font-family: 'Futura-Regular';
+}
 .font-16 {
   font-size: 16px;
   line-height: 1.54;
@@ -3240,6 +3255,78 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.box-informative {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .box-informative {
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+}
+.box-informative .box-btn {
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  .box-informative .box-btn {
+    margin-left: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .box-informative .box-btn {
+    margin-top: 0;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+.box-informative .box-btn .btn {
+  width: 100%;
+}
+.box-informative .box-btn .btn:not(:last-child) {
+  margin-bottom: 8px;
+}
+@media (min-width: 1024px) {
+  .box-informative .box-btn .btn {
+    width: auto;
+  }
+  .box-informative .box-btn .btn:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+}
+.box-informative .box-icon .icon {
+  display: inline-block;
+  font-size: 50px;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .box-informative .box-icon .icon {
+    margin-right: 24px;
+  }
+}
+.box-informative .box-info {
+  flex: 1;
+}
+.box-informative .btn:not(:last-child) {
+  margin-right: 8px;
+}
+.block-comments {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px -16px rgba(0, 0, 0, 0.08);
+  padding: 45px;
+}
+.block-comments .block-points {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.block-comments .block-points .icon {
+  font-size: 18px;
+  color: #fabb05;
 }
 .component-list-icons .title-primary {
   margin-bottom: 2em;
@@ -3676,13 +3763,47 @@ button.btn {
   top: 0;
   bottom: 0;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   padding: 0 4px;
+  color: #016a7f;
 }
 .component-galeria .icon-arrow.right {
   right: 0;
+}
+.lightbox {
+  min-height: 100vh;
+}
+.lightbox .lb-outerContainer {
+  background-color: transparent;
+  min-width: 100%;
+}
+.lightbox .lb-outerContainer img {
+  margin: 0 auto;
+}
+.lightbox .lb-image {
+  border-color: transparent;
+  border-radius: 13px;
+}
+.lightbox .lb-dataContainer {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+}
+.lightbox .lb-data .lb-caption {
+  font-family: 'Futura-Regular';
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.lightbox .lb-data .lb-number {
+  font-family: 'Futura-Light';
+  font-size: 16px;
+}
+.lightbox .lb-data .lb-closeContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 .card {
   overflow: hidden;
@@ -3729,6 +3850,7 @@ button.btn {
   z-index: 1;
 }
 .card.card-m {
+  padding: 24px;
   min-height: 300px;
 }
 @media (min-width: 768px) {
@@ -3740,6 +3862,18 @@ button.btn {
   .card.card-m {
     min-height: 548px;
   }
+}
+.card.card-s {
+  padding: 24px;
+  min-height: 300px;
+}
+@media (min-width: 1024px) {
+  .card.card-s {
+    min-height: 290px;
+  }
+}
+.card.banner {
+  height: 30vh;
 }
 .grid-4 .card.card-l {
   padding: 24px;
@@ -3783,6 +3917,7 @@ button.btn {
   position: relative;
   margin-bottom: 72px;
   padding-bottom: 0;
+  padding-top: 72px;
 }
 @media (min-width: 768px) {
   .distributive-es-basic-component {
@@ -3827,6 +3962,9 @@ button.btn {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.card-info .box-img.big {
+  height: 400px;
 }
 .card-info .box-info {
   margin-top: 0;
