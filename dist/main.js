@@ -24,6 +24,12 @@ var AnimateCmp = {
 			if($(this).find(".animate-fall").length > 0){
 				AnimateCmp.fallAnimate($(this));
 			}
+			if($(this).find(".animate-text").length > 0){
+				AnimateCmp.textAnimate($(this));
+			}
+			if($(this).find(".animate-img").length > 0){
+				AnimateCmp.imgAnimate($(this));
+			}
 		});
 		$(document).find(".lca-banner-1").each(function(){
 			if($(this).find(".animate-text").length > 0){
@@ -33,7 +39,10 @@ var AnimateCmp = {
 				AnimateCmp.imgAnimate($(this));
 			}
 		});
-		$(document).find(".mosaic-component .block-container-img").each(function(){
+		// $(document).find(".mosaic-component .block-container-img").each(function(){
+		// 	AnimateCmp.mosaicAnimate($(this));
+		// })
+		$(document).find(".animate-mosaic").each(function(){
 			AnimateCmp.mosaicAnimate($(this));
 		})
 	},
@@ -46,15 +55,16 @@ var AnimateCmp = {
 			.addTo(AnimateCmp.controller);
 	},
 	fallAnimate: function(obj){
-		var tweenCard = TweenMax.staggerFromTo(obj.find(".animate-fall .grid-card-item .card, .animate-fall .grid-card-item .block-globo"), 0.5,{transform: 'translate(0,40px)',opacity: '0', ease: Power0.easeNone},{transform: 'translate(0,0)',opacity: '1', ease: Power0.easeNone}, 0.4);
-		new ScrollMagic.Scene({triggerElement: obj[0], reverse:false})
+		var twxObj = obj.find(".animate-fall .grid-card-item .card, .animate-fall .grid-card-item .block-globo, .animate-fall .item-shortcut, .animate-fall .grid-item, .animate-fall .card-info");
+		var tweenCard = TweenMax.staggerFromTo( twxObj, 0.5,{transform: 'translate(0,40px)',opacity: '0', ease: Power0.easeNone},{transform: 'translate(0,0)',opacity: '1', ease: Power0.easeNone}, 0.4);
+		new ScrollMagic.Scene({triggerElement: obj[0], reverse:false, triggerHook: 0.9})
 			.setTween(tweenCard)
 			.addTo(AnimateCmp.controller);
 	},
 	imgAnimate: function(obj){
 		var img = obj.find(".animate-img")
 		var tweenCard = TweenMax.from(img, 1.5,{transform: 'scale(1.3)'});
-		new ScrollMagic.Scene({triggerElement: obj[0], reverse:false}) 
+		new ScrollMagic.Scene({triggerElement: obj[0], reverse:false, triggerHook: 0.9}) 
 			.setTween(tweenCard)
 			.addTo(AnimateCmp.controller);
 	},
@@ -65,10 +75,17 @@ var AnimateCmp = {
 			.setTween(tweenCard)
 			.addTo(AnimateCmp.controller);
 	},
+	textAnimate:function(obj) {
+		var objAnimate = obj.find(".animate-text");
+		var tweenCard = new TimelineMax().from(objAnimate, 1.5,{transform: 'translate(0px, 40px)',opacity: '0'});
+		new ScrollMagic.Scene({triggerElement: obj[0], reverse:false, triggerHook: 0.8}) 
+			.setTween(tweenCard)
+			.addTo(AnimateCmp.controller);
+	},
 	mosaicAnimate: function(obj){
 		var time = obj.height() /2;
-		var tweenCard = TweenMax.from(obj, 0.5,{opacity: 0,ease: Power0.easeNone});
-		new ScrollMagic.Scene({triggerElement: obj[0], duration: time, reverse:false}) 
+		var tweenCard = TweenMax.from(obj, 0.5,{opacity: 0,ease: Power2.easeNone});
+		new ScrollMagic.Scene({triggerElement: obj[0], reverse:false, triggerHook: 0.8}) 
 			.setTween(tweenCard)
 			.addTo(AnimateCmp.controller);
 	}

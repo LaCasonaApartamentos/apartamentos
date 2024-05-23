@@ -120,13 +120,14 @@
         padding-top: 72px;
     }
     .bg-box{
-        background-color: @white;
+        background-color: #c0ebf2;
         &.bg-box-medium {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: calc(100% - 56px);
+            border-bottom: solid 1px #c0ebf2;
             @media(min-width:1024px){
                 height: calc(100% - 64px);
             }
@@ -161,6 +162,12 @@
             height: 100%;
             object-fit: cover;
         }
+        &.type-container{
+            padding: 24px;
+            img{
+                object-fit: contain;
+            }
+        }
         &.big{
             height: 400px;
         }
@@ -173,6 +180,7 @@
             margin-bottom: 16px;
         }
     }
+
 }
 .grid-component{
     .item{
