@@ -884,17 +884,23 @@ footer .box-btn .btn:not(:last-child) {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-snowflake-o:before {
-  content: "\eb9b";
+.icon-ciclismo:before {
+  content: "\eb9c";
 }
-.icon-bed:before {
-  content: "\eb9a";
+.icon-escalada:before {
+  content: "\eb9d";
 }
-.icon-tree:before {
-  content: "\eb95";
+.icon-espeologia:before {
+  content: "\eb9e";
 }
-.icon-leaf:before {
-  content: "\eb96";
+.icon-micologia:before {
+  content: "\eb9f";
+}
+.icon-senderismo:before {
+  content: "\eba0";
+}
+.icon-star:before {
+  content: "\eba1";
 }
 .icon-alarm1:before {
   content: "\e900";
@@ -1310,7 +1316,7 @@ footer .box-btn .btn:not(:last-child) {
 .icon-spell-check1:before {
   content: "\e989";
 }
-.icon-star:before {
+.icon-star1:before {
   content: "\e98a";
 }
 .icon-star-empty1:before {
@@ -2887,6 +2893,18 @@ footer .box-btn .btn:not(:last-child) {
 }
 .icon-IcoMoon:before {
   content: "\eb94";
+}
+.icon-snowflake-o:before {
+  content: "\eb9b";
+}
+.icon-bed:before {
+  content: "\eb9a";
+}
+.icon-tree:before {
+  content: "\eb95";
+}
+.icon-leaf:before {
+  content: "\eb96";
 }
 body {
   background: #f8f8f8;
